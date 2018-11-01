@@ -1,0 +1,1 @@
+A proposal for a model solution for the Mimmit Koodaa React beginner workshop outcome.
