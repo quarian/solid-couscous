@@ -4,7 +4,7 @@ class GiphContainer extends Component {
   render() {
     return (
       <div className="GiphContainer">
-        Giph Container
+        <img src={this.props.url} alt={""} />
       </div>
     );
   }
