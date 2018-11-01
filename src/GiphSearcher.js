@@ -7,7 +7,7 @@ class GiphSearcher extends Component {
     return (
       <div className="GiphSearcher">
         Giph Seacher
-        <SearchButton />
+        <SearchButton category={this.props.category} />
         <GiphContainer />
       </div>
     );
