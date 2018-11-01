@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import GiphSearcher from "./GiphSearcher";
 import './App.css';
 
-const categories = ["cat", "dog"];
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: ["cat", "dog", "pie", "skifree"]
+    };
+  }
   render() {
     return (
       <div className="App">
-        {categories.map((category, index) => {
+        {this.state.categories.map((category, index) => {
           return <GiphSearcher key={index} category={category} />;
         })}
       </div>
