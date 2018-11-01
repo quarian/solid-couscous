@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
+import GiphSearcher from "./GiphSearcher";
 import './App.css';
+
+const searchTerms = ["cat", "dog"];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          WHEE
-        </header>
+        {searchTerms.map(term => {
+          return <GiphSearcher />;
+        })}
       </div>
     );
   }
