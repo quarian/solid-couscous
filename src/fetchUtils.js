@@ -1,10 +1,10 @@
 const apiKey = "seYUer2bPoJZHvH7soSy12u5ynQXIYbT";
 
-export const fetchGiph = (category, callback) => {
+export const fetchGiph = (category, setUrl) => {
   fetch(getGiphyUrl(category))
     .then(response => response.json())
     .then(json => {
-      callback(json.data.image_url);
+      setUrl(json.data.image_url);
     });
 }
 
