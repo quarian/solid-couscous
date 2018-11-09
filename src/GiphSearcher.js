@@ -8,10 +8,9 @@ class GiphSearcher extends Component {
     this.state = {
       url: null
     };
-    this.setUrl = this.setUrl.bind(this);
   }
 
-  setUrl(url) {
+  setUrl = (url) => {
     this.setState({ url });
   }
 
