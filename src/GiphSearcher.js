@@ -16,10 +16,10 @@ class GiphSearcher extends Component {
 
   render() {
     return (
-      <div className="GiphSearcher">
+      <div className={this.props.styled ? "GiphSearcher-styled" : "GiphSearcher"}>
         <div className="GiphSearcherTitle"><span>Giph Searcher for a {this.props.category}!</span></div>
-        <SearchButton category={this.props.category} setUrl={this.setUrl} />
-        <GiphContainer url={this.state.url} />
+          <SearchButton category={this.props.category} setUrl={this.setUrl} />
+          <GiphContainer url={this.state.url} />
       </div>
     );
   }
