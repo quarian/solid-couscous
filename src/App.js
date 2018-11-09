@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2>Amazing Giph Search tool!</h2>
         {this.state.categories.map((category, index) => {
           return <GiphSearcher key={index} category={category} />;
         })}
