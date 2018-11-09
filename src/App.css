@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.GiphSearcher {
+  height: 400px;
+}
+
+.SearchButton {
+  height: 10%;
+}
+
+.GiphContainer img, .GiphContainer {
+  height: 90%;
+}
