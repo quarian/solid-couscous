@@ -13,3 +13,21 @@
 .GiphContainer img, .GiphContainer {
   height: 90%;
 }
+
+.Input input {
+  font-size: x-large;
+}
+
+.Input button {
+  font-size: x-large;
+}
+
+.Input-Fullscreen input {
+  font-size: xx-large;
+  background-color: pink;
+  width: 100%;
+}
+
+.Input-Fullscreen {
+  height: 90vh;
+}

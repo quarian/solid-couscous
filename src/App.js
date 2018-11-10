@@ -1,31 +1,28 @@
 import React, { Component } from 'react';
-import GiphSearcher from "./GiphSearcher";
-import Input from "./Input";
 import './App.css';
+import FullScreenSearch from './FullScreenSearch';
+import CategorySearch from './CategorySearch';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: ["cat"],
-      styled: false
+      fullScreen: false
     };
-  }
-
-  addCategory = (category) => {
-    const newCategories = [];
-    Object.assign(newCategories, this.state.categories).push(category);
-    this.setState({ categories: newCategories, styles: this.state.styled });
   }
 
   render() {
     return (
       <div className={"App"}>
-        <h2 className={"Header"}>Amazing Giph Search tool!</h2>
-        <Input addCategory={this.addCategory} />
-        {this.state.categories.map((category, index) => {
-          return <GiphSearcher key={index} category={category} />;
-        })}
+        <div>
+          Fullscreen:
+          <input type="checkbox" label="Fullscreen?" onChange={() => this.setState({ fullScreen: !this.state.fullScreen })} value={this.state.fullScreen} />
+        </div>
+        {this.state.fullScreen ?
+          <FullScreenSearch />
+          :
+          <CategorySearch />
+        }
       </div>
     );
   }
